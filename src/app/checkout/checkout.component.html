@@ -1,0 +1,13 @@
+<mat-card class="example-card">
+  <mat-card-title>Resumo do Pedido</mat-card-title>
+  <mat-card-content>
+    <app-shopping-cart
+      buttonLink="/order"
+      buttonName="Save Order"
+      buttonIcon="save"
+      (notifyParent)="onChange($event)"
+    ></app-shopping-cart>
+  </mat-card-content>
+  <mat-divider inset></mat-divider>
+  <h2>Total: {{ sumAllItems() | currency: 'BRL':true }}</h2>
+</mat-card>

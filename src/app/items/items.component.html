@@ -1,0 +1,10 @@
+<section>
+  <app-item
+    *ngFor="let item of items"
+    [name]="item.name"
+    [price]="item.price"
+    [image]="item.image"
+    [quantity]="item.quantity"
+    (notifyParent)="receiveNotification($event)"
+  ></app-item>
+</section>

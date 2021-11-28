@@ -1,0 +1,21 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ name }}</mat-card-title>
+    <mat-card-subtitle>R$ {{ price }}</mat-card-subtitle>
+  </mat-card-header>
+
+  <img [src]="image" mat-card-image />
+
+  <app-quantity-selector [(quantity)]="quantity"></app-quantity-selector>
+
+  <mat-card-actions>
+    <button
+      (click)="handleClick('PURCHASE')"
+      mat-mini-fab
+      color="warn"
+      aria-label="Add icon button with a plus icon"
+    >
+      <mat-icon>add_shopping_cart</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

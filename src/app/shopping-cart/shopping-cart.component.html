@@ -1,0 +1,18 @@
+<mat-list role="list">
+  <app-cart-item
+    *ngFor="let item of cart"
+    [name]="item.name"
+    [price]="item.price"
+    [quantity]="item.quantity"
+    [image]="item.image"
+    (notifyParent)="receiveNotification($event)"
+  ></app-cart-item>
+</mat-list>
+
+<div>
+  <app-submit-button
+    [name]="buttonName"
+    [icon]="buttonIcon"
+    [link]="buttonLink"
+  ></app-submit-button>
+</div>

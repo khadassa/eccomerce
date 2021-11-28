@@ -1,0 +1,19 @@
+<mat-list-item role="listitem">
+  <img [src]="image" />
+  <div class="description">
+    <span>{{ name }}</span>
+    <span>{{ price | currency: 'BRL':true }}</span>
+  </div>
+  <app-quantity-selector
+    [quantity]="quantity"
+    (quantityChange)="onChange($event)"
+  ></app-quantity-selector>
+  <button
+    (click)="onRemoval()"
+    mat-mini-fab
+    color="warn"
+    aria-label="Add icon button with a plus icon"
+  >
+    <mat-icon>remove_shopping_cart</mat-icon>
+  </button>
+</mat-list-item>

@@ -1,0 +1,24 @@
+mat-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+img {
+  width: 10%;
+  padding-right: 20px;
+  margin: 10px 10px 0 0;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: center;
+  width: 200px;
+}
+
+.quantity {
+  width: 150px;
+}

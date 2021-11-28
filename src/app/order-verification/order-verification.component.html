@@ -1,0 +1,69 @@
+<mat-form-field appearance="fill">
+  <mat-label>Primeiro nome</mat-label>
+  <input matInput placeholder="Primeiro Nome" required />
+</mat-form-field>
+
+<br />
+
+<mat-form-field appearance="fill">
+  <mat-label>Último nome</mat-label>
+  <input matInput placeholder="Último Nome" required />
+</mat-form-field>
+
+<br />
+
+<mat-form-field appearance="fill">
+  <mat-label>Enter your email</mat-label>
+  <input matInput placeholder="pat@example.com" required />
+</mat-form-field>
+
+<br />
+
+<mat-form-field appearance="fill">
+  <mat-label>Endereço</mat-label>
+  <input matInput placeholder="Rua das Pedras, Cabo Frio - RJ" required />
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Complemento</mat-label>
+  <input matInput placeholder="Apt xx" />
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>CEP</mat-label>
+  <input matInput required />
+</mat-form-field>
+
+<br />
+
+<mat-form-field appearance="fill">
+  <mat-label>Digite sua senha</mat-label>
+  <input matInput [type]="hide ? 'password' : 'text'" required />
+  <button
+    mat-icon-button
+    matSuffix
+    (click)="hide = !hide"
+    [attr.aria-label]="'Hide password'"
+    [attr.aria-pressed]="hide"
+  >
+    <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+  </button>
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Digite sua senha</mat-label>
+  <input matInput [type]="hide ? 'password' : 'text'" required />
+  <button
+    mat-icon-button
+    matSuffix
+    (click)="hide = !hide"
+    [attr.aria-label]="'Hide password'"
+    [attr.aria-pressed]="hide"
+  >
+    <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+  </button>
+</mat-form-field>
+
+<br />
+
+<app-submit-button link="/order" name="Salvar" icon="save"></app-submit-button>
